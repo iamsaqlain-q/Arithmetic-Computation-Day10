@@ -5,4 +5,4 @@ read num2
 echo "Enter c"
 read num3
 
-echo "$num1 $num2 $num3"
+c=`echo  $num1 $num2 $num3 | awk  '{print $num1+$num2*$num3}'` 
