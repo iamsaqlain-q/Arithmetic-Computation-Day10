@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 
-#Welcome to Arithmetic Computation Program on Master #Branch
+#Start with Displaying Welcome to Employee Wage Computation Program on Master #Branch
 
 
 echo ""
@@ -30,4 +30,10 @@ echo ""
 operationum2=$(($((num1*$num2))+$num3))
 
 echo "Computation 2 :     a * b + c = $operationum2"
+echo ""
+
+#Compute c + a / b
+operationum3=$((num3+$((num1/$num2))))
+
+echo "Computation 3 :     c + a / b = $operationum3"
 echo ""
