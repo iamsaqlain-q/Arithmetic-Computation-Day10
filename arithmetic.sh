@@ -9,6 +9,7 @@ echo "Welcome to the Arithmetic Computation and Sorting Program"
 echo "This program computes different arithmetic expressions and sorts the results."
 echo ""
 
+
 #Write program to take three inputs – a, b & c
 echo -n " Enter the first number : "
 read num1
@@ -20,11 +21,13 @@ read num3
 echo "You entered $num1 $num2 $num3"
 echo ""
 
+
 #Compute a + b * c
 operationum1=$((num1+$((num2*$num3))))
 
 echo "Computation 1 :     a + b * c = $operationum1"
 echo ""
+
 
 #Compute a * b + c  
 operationum2=$(($((num1*$num2))+$num3))
@@ -32,15 +35,27 @@ operationum2=$(($((num1*$num2))+$num3))
 echo "Computation 2 :     a * b + c = $operationum2"
 echo ""
 
+
 #Compute c + a / b
 operationum3=$((num3+$((num1/$num2))))
 
 echo "Computation 3 :     c + a / b = $operationum3"
 echo ""
 
+
 #Compute a % b + c
 operation4=$(($((num1%$num2))+$num3))
 
-
 echo "Computation 4 :     a % b + c = $operation4"
 echo ""
+
+
+#Store the results in a Dictionary
+result=([1]=$operationum1 [2]=$operationum2 [3]=$operationum3 [4]=$operation4) 
+echo "Displaying Dictionary : "
+echo "Operation Key Value"
+for key in "${!result[@]}"; do
+    echo "Computation $((key+1))   ${result[$key]}"
+done
+echo ""
+
