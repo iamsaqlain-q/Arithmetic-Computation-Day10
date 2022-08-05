@@ -37,3 +37,10 @@ operationum3=$((num3+$((num1/$num2))))
 
 echo "Computation 3 :     c + a / b = $operationum3"
 echo ""
+
+#Compute a % b + c
+operation4=$(($((num1%$num2))+$num3))
+
+
+echo "Computation 4 :     a % b + c = $operation4"
+echo ""
